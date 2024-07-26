@@ -100,7 +100,6 @@ while True:
                 cv2.circle(img, (x1, y1), 15, drawColor, cv2.FILLED)
             if fingerList[0] and brightnessMode:
                 img = bm.brightnessControl(img,lmList)
-                print(fingerList[0])
             if fingerList[0] and soundMode:
                 img = sm.soundControl(img,lmList)
         

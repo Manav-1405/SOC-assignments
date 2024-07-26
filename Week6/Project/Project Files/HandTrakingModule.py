@@ -46,7 +46,7 @@ class handDetector():
         fingerTips = [8, 12, 16, 20]
         thumbTip = 4
 
-        if lmList[thumbTip][1] > lmList[thumbTip-1][1]:
+        if lmList[thumbTip][1] < lmList[thumbTip-1][1]:
             fingerList.append(1)
         else:
             fingerList.append(0)

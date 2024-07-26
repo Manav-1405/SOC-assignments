@@ -24,6 +24,7 @@ def soundControl(img, lmList):
 
         distance = math.dist((xa,ya),(xb,yb))
         vol = int(np.interp(distance, [10, 300], [volMin, volMax]))
+        actVol = int(np.interp(vol, [volMin, volMax], [0, 100]))
         volume.SetMasterVolumeLevel(vol, None)
-        cv2.putText(img, f'Volume: {vol}', (20, 450), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 3)
+        cv2.putText(img, f'Volume: {actVol}', (20, 450), cv2.FONT_HERSHEY_SIMPLEX, 1, (255, 0, 0), 3)
     return img
